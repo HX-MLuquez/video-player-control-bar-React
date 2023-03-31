@@ -1,0 +1,94 @@
+.reproductor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-container {
+  position: relative;
+  cursor: pointer;
+  width: 50%;
+}
+
+.reproductor-progress {
+  width: 50%;
+  height: 8px;
+}
+
+.reproductor-controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #333;
+  width: 50%;
+}
+.volume-container {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+}
+
+.seeBar {
+  position: relative;
+  width: 100%;
+  top: -50px;
+  visibility: visible;
+  transform: rotate(-90deg); /* gira la barra 90 grados */
+}
+.no_seeBar {
+  position: absolute;
+  visibility: hidden;
+}
+
+.reproductor-controls button {
+  color: rgb(254, 254, 254);
+  padding: 8px;
+  margin: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.mute-button{
+  position: absolute;
+}
+.reproductor-time{
+  display: flex;
+  align-items: center
+}
+.fullscreen{
+  margin-left: auto;
+}
+
+button {
+  padding: 5px 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #ceb2a4;
+  border: solid 2px rgb(212, 161, 161);
+  transition: all 0.2s;
+}
+button:hover {
+  color: rgb(60, 3, 3);
+  background-color: #ea8a5a;
+  /* border: none; */
+  border: solid 2px rgb(216, 81, 81);
+}
+
+
+/* Estilos para el componente en pantallas pequeñas */
+@media only screen and (max-width: 780px) {
+  .play-pause-button{
+    display: none;
+  }
+  .reproductor-container:hover .play-pause-button{
+    position: relative;
+    display: flex;
+    
+  }
+  
+}
+
+/* Estilos para el componente en pantallas muy pequeñas */
+@media only screen and (max-width: 580px) {
+ .reproductor-time{
+  display: none;
+ }
+}

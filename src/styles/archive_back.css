@@ -1,0 +1,141 @@
+/* Estilos para el componente en pantallas grandes */
+.reproductor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .reproductor-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .reproductor-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .rewind-button,
+  .play-pause-button,
+  .fast-forward-button,
+  .mute-button {
+    border: none;
+    background-color: #2196f3;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rewind-button:hover,
+  .play-pause-button:hover,
+  .fast-forward-button:hover,
+  .mute-button:hover {
+    background-color: #0e91ea;
+  }
+  
+  .rewind-button:active,
+  .play-pause-button:active,
+  .fast-forward-button:active,
+  .mute-button:active {
+    background-color: #0d80cc;
+  }
+  
+  .rewind-button:focus,
+  .play-pause-button:focus,
+  .fast-forward-button:focus,
+  .mute-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0d80cc;
+  }
+  
+  .play-pause-button {
+    margin: 0 1rem;
+  }
+  
+  .reproductor-time {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: #555;
+  }
+  
+  .reproductor-progress {
+    width: 50%;
+    height: 1rem;
+    margin: 0 1rem;
+  }
+  
+  .volume-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  
+  .volume-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #volume-slider {
+    width: 6rem;
+    margin: 0.5rem 0;
+  }
+  
+  .volume {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Estilos para el componente en pantallas pequeñas */
+  @media only screen and (max-width: 768px) {
+    .reproductor-controls {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  
+    .reproductor-progress {
+      margin-top: 1rem;
+    }
+  
+    .volume-container {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Estilos para el componente en pantallas muy pequeñas */
+  @media only screen and (max-width: 480px) {
+    .reproductor-title {
+      font-size: 1.5rem;
+    }
+  
+    .rewind-button,
+    .play-pause-button,
+    .fast-forward-button,
+    .mute-button {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      margin: 0.3rem;
+    }
+  
+    .reproductor-time {
+      font-size: 0.8rem;
+    }
+  
+    .reproductor-progress {
+      width: 90%;
+      margin: 0.5rem 0;
+    }
+  
+    .volume-slider-container {
+      margin-top: 0.5rem;
+    }
+  }
